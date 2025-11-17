@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IPT Chemical Management</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              'ipt-blue': '#003366',
+              'ipt-dark-blue': '#002244',
+              'ipt-light-blue': '#005a9c',
+              'ipt-gold': '#c7a469',
+              'ipt-gray': '#f0f2f5',
+            },
+            keyframes: {
+              'fade-in': {
+                '0%': { opacity: '0', transform: 'scale(0.95)' },
+                '100%': { opacity: '1', transform: 'scale(1)' },
+              },
+              'kenburns': {
+                '0%': { transform: 'scale(1.0) translate(0, 0)' },
+                '100%': { transform: 'scale(1.1) translate(1%, -1%)' },
+              },
+              'fade-in-up': {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              }
+            },
+            animation: {
+              'fade-in': 'fade-in 0.2s ease-out forwards',
+              'kenburns': 'kenburns 20s ease-in-out infinite alternate',
+              'fade-in-up': 'fade-in-up 0.8s ease-out forwards',
+            },
+          },
+        },
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react-markdown": "https://aistudiocdn.com/react-markdown@^10.1.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.28.0",
+    "@supabase/supabase-js": "https://aistudiocdn.com/@supabase/supabase-js@^2.45.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-100 font-sans">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
